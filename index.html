@@ -1,0 +1,405 @@
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Said ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:linear-gradient(135deg,#1c1c1c,#3a0f0f);
+    font-family:'Montserrat',sans-serif;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* HEADER */ 
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+header h1{
+    font-family:'Pacifico',cursive;
+    font-size:3em;
+    color:#ff5e7e;
+}
+.heart{
+    animation:latido 1.2s infinite;
+    color:red;
+}
+@keyframes latido{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.3)}
+    100%{transform:scale(1)}
+}
+
+/* SKATE */
+.skate-container{
+    width:100%;
+    height:220px;
+    position:relative;
+    overflow:hidden;
+}
+.skater{
+    position:absolute;
+    bottom:40px;
+    width:120px;
+    height:160px;
+    animation:skateMove 6s linear infinite;
+}
+
+/* OLLIE */
+.skater{
+    animation:
+        skateMove 6s linear infinite,
+        ollie 2s ease-in-out infinite;
+}
+
+@keyframes ollie{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-60px)}
+}
+
+@keyframes skateMove{
+    from{left:-150px}
+    to{left:110vw}
+}
+
+/* SKATER BODY */
+.head{
+    width:35px;height:35px;
+    background:#ffccb3;
+    border-radius:50%;
+    position:absolute;
+    left:42px;
+}
+.body{
+    width:20px;height:60px;
+    background:#ff5e7e;
+    position:absolute;
+    top:35px;
+    left:50px;
+    border-radius:10px;
+}
+.board{
+    width:100px;height:12px;
+    background:#222;
+    position:absolute;
+    bottom:25px;
+    left:10px;
+    border-radius:20px;
+}
+.wheel{
+    width:14px;height:14px;
+    background:#ff5e7e;
+    border-radius:50%;
+    position:absolute;
+    bottom:-8px;
+    animation:spin .5s linear infinite;
+}
+.wheel.left{left:10px}
+.wheel.right{right:10px}
+
+@keyframes spin{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
+
+/* DOMO SKATER */
+.domo{
+    width:160px;height:160px;
+    background:#5a2d1c;
+    margin:40px auto;
+    border-radius:15px;
+    position:relative;
+}
+.eye{
+    width:18px;height:18px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    top:40px;
+}
+.eye.left{left:35px}
+.eye.right{right:35px}
+.mouth{
+    width:100px;height:45px;
+    background:#111;
+    position:absolute;
+    bottom:35px;
+    left:30px;
+    color:white;
+    font-size:22px;
+    text-align:center;
+    line-height:45px;
+}
+
+/* HEARTS */
+.heart-float{
+    position:fixed;
+    color:#ff5e7e;
+    font-size:20px;
+    animation:floatUp 4s linear forwards;
+}
+@keyframes floatUp{
+    from{bottom:0;opacity:1}
+    to{bottom:100vh;opacity:0}
+}
+
+/* CARD */
+.card{
+    max-width:800px;
+    margin:auto;
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+/* GALLERY COLLAGE */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:18px;
+    margin-top:25px;
+}
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 0 18px rgba(255,94,126,0.45);
+    transition:transform .35s ease, box-shadow .35s ease;
+}
+.gallery img:hover{
+    transform:scale(1.06);
+    box-shadow:0 0 28px rgba(255,94,126,0.75);
+}
+/* CONTENEDOR DOMO SKATER */
+.domo-skater-original{
+    width:220px;
+    margin:40px auto;
+    animation:domoOllie 2.5s ease-in-out infinite;
+}
+
+@keyframes domoOllie{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-45px)}
+}
+
+/* DOMO ORIGINAL */
+.domo-original{
+    width:170px;
+    height:170px;
+    background:#6b3a1e;
+    border-radius:18px;
+    margin:auto;
+    position:relative;
+}
+
+/* OJOS */
+.domo-eyes{
+    display:flex;
+    justify-content:space-between;
+    padding:45px 35px 0;
+}
+.domo-eyes span{
+    width:20px;
+    height:20px;
+    background:white;
+    border-radius:50%;
+}
+
+/* BOCA */
+.domo-mouth{
+    width:120px;
+    height:55px;
+    background:#b10000;
+    position:absolute;
+    bottom:30px;
+    left:25px;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-end;
+    padding-bottom:40px;
+    box-sizing:border-box;
+}
+/* DIENTES */
+.domo-mouth span{
+    width:0;
+    height:0;
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-top:14px solid white;
+
+}
+
+/* SKATE */
+.skate-domo{
+    width:160px;
+    height:14px;
+    background:#222;
+    border-radius:20px;
+    margin:12px auto 0;
+    position:relative;
+}
+
+.skate-wheel{
+    width:16px;
+    height:16px;
+    background:#ff5e7e;
+    border-radius:50%;
+    position:absolute;
+    bottom:-10px;
+    animation:spin .6s linear infinite;
+}
+
+.skate-wheel.left{left:20px}
+.skate-wheel.right{right:20px}
+/* BUTTON */
+button{
+    background:#ff5e7e;
+    border:none;
+    padding:15px 25px;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:1em;
+}
+button:hover{background:#ff2f5f}
+
+footer{
+    text-align:center;
+    padding:30px;
+    opacity:.8;
+    .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+    .gallery img{
+        height:200px;
+    }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Para Said <span class="heart">❤️</span></h1>
+<p>tu patinando JSJAJAJJJJA 🛹</p>
+<button onclick="playMusic()">🎵 música romantica para mi beibee</button>
+</header>
+
+<!-- SKATER -->
+<div class="skate-container">
+<div class="skater">
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="board">
+        <div class="wheel left"></div>
+        <div class="wheel right"></div>
+    </div>
+</div>
+</div>
+
+<!-- MESSAGE -->
+<div class="card">
+<p>
+Said, te amo con todo mi corazon nene loco.
+ERES MI NENE LOCO BEBELIN ❤️ mi chikitoooo 
+muak muak muak
+</p>
+</div>
+<div class="card">
+    <h2 style="text-align:center; color:#ff7a7a;">Nuestros momentos 🤍</h2>
+
+    <div class="gallery">
+        <img src="sais1.jpeg" alt="Foto con Said">
+        <img src="said2.jpeg" alt="nene loco">
+        <img src="said3.jpeg" alt="cachondo">
+        <img src="said4.jpeg" alt="loco goloso">
+        <img src="said5.jpeg" alt="pervertidoooo">
+        <img src="said6.jpeg" alt="daddy">
+    </div>
+
+    <p style="text-align:center; margin-top:20px; opacity:0.85;">
+        Cada foto guarda un pedacito de lo que siento por ti,  
+        momentos simples que contigo se vuelven inolvidables ❤️
+    </p>
+</div>
+<!--DOMO SKATER-->
+<div class="card" style="text-align:center;">
+    <h2 style="color:#ff7a7a;"> mira el Domo-kun🛹</h2>
+
+    <div class="domo-skater-original">
+        <!-- DOMO -->
+        <div class="domo-original">
+            <div class="domo-eyes">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="domo-mouth">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- SKATE -->
+        <div class="skate-domo">
+            <div class="skate-wheel left"></div>
+            <div class="skate-wheel right"></div>
+        </div>
+    </div>
+
+    <p style="margin-top:20px; opacity:0.85;">
+         ¿te gusta? JAJAJA❤️
+    </p>
+</div>
+<!-- DOMO -->
+<div class="domo">
+<div class="eye left"></div>
+<div class="eye right"></div>
+<div class="mouth">❤</div>
+</div>
+
+<footer>
+Hecho con amor solo para ti nena loCAAA ✨
+</footer>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+<source src="HOME.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playMusic(){
+    document.getElementById("music").play();
+}
+
+/* HEARTS GENERATOR */
+setInterval(()=>{
+    const heart=document.createElement("div");
+    heart.className="heart-float";
+    heart.innerHTML="❤";
+    heart.style.left=Math.random()*100+"vw";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),4000);
+},500);
+</script>
+
+</body>
+</html>
